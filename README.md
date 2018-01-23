@@ -6,16 +6,24 @@ incoming video file paths with the given ffmpeg command arguments.
 
 ## Installing / Getting started
 
-You can install Chevir as follows:
+You can install and start using Chevir as follows:
 
 ```shell
 git clone https://github.com/zafergurel/chevir.git
+cd chevir/
+mkdir log # default log folder in config.yaml
 pip install -r requirements.txt # installs requirements
-python3 main.py test <video file path> # adds a video file path
-python3 main.py start # start listening to rabbitmq for new tasks
-```
+./main.py test <video file path> # adds a video file path.
+./main.py start # start listening to rabbitmq for new tasks
 
-You need a RabbitMQ server up and running.
+# In Windows: 
+# py -3 main.py test <video file path>
+# py -3 main.py start <video file path>
+
+# CTRL+C to quit
+```
+Chevir is a Python 3 application.
+You need a RabbitMQ (http://www.rabbitmq.com/) server up and running.
 Chevir listens to a channel named "video-encoding".
 You can specify the RabbitMQ server information in config.yaml.
 

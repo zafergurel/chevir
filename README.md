@@ -10,9 +10,9 @@ You can install Chevir as follows:
 
 ```shell
 git clone https://github.com/zafergurel/chevir.git
-python setup.py install
-chevir test <video file path> # adds a video file path
-chevir start # start listening to rabbitmq for new tasks
+pip install -r requirements.txt # installs requirements
+python3 main.py test <video file path> # adds a video file path
+python3 main.py start # start listening to rabbitmq for new tasks
 ```
 
 You need a RabbitMQ server up and running.
@@ -31,9 +31,8 @@ pip install -r requirements.txt
 
 ## Features
 
-* What's the main functionality
-* You can also do another thing
-* If you get really randy, you can even do this
+* Encodes videos using ffmpeg
+* Listens to a RabbitMQ queue named video-encoding
 
 ## Configuration
 
